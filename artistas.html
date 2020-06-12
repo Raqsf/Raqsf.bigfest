@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <title>Artistas</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"></link>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+
+    <!-- jQuery -->
+    <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.css">
+    <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.structure.css">
+    <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.theme.css">
+  </head>
+  <body>
+
+    <!-- Navbar
+================================================== -->
+    <nav class="navbar navbar-dark bg-dark">
+      <a class="navbar-brand mx-auto" href="index1.html">
+        <img src="images/Big Fest.png" width="60" height="60" class="d-inline-block align-justify" alt="">
+      </a>
+    </nav>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="artistas.html">Artistas <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="equipamentos.html">Equipamentos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="servicos.html">Serviços</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pesquisaArtista.html">Pesquisa</a>
+          </li>
+        </ul>
+      </div>
+      <div class="header__nav__widget">
+        <div class="header__nav__widget__btn">
+            <a href="index.html">Log Out</a></li>
+            <a href="ContaUtilizador.html"><i class="fa fa-user"></i></a>
+            <a href="carrinho.html"><i class="fa fa-shopping-cart"></i></a>
+        </div>
+      </div>
+    </nav>
+
+
+    <div class="container text-left"  style="padding-top: 20px;">
+      <div class="row">
+        <label for="datepicker">Inicio de evento:</label>
+        <div class="input-group date col-md-2">
+          <input type="text" class="form-control form-control-sm" id="datepicker">
+          <span class="input-group-addon">
+            <span style="padding-top: 10px!important; padding-left: 10px;" class="fa fa-calendar"></span>
+        </span>
+        </div>
+        <label style="padding-left: 50px;" for="datepicker">Fim de evento:</label>
+        <div class="input-group date col-md-2">
+          <input type="text" class="form-control form-control-sm" id="datepicker1">
+          <span class="input-group-addon">
+            <span style="padding-top: 10px!important; padding-left: 10px;" class="fa fa-calendar"></span>
+        </span>
+        </div>
+    </div>
+    
+
+    
+    <div class="container"  style="padding-top: 20px; padding-bottom: 50px">
+      <div class="row">
+      <!-- ko foreach: agentes -->
+      <!-- ko foreach: artistas -->
+        <div id="item" class="col-md-2">
+          <span style="float:right;"><a class="btn btn-outline-secondary btn-sm" id="detalhes" style="color: #999; font-size: 1.0em;"></a><i class='fa fa-circle' data-bind="style:{color: disponibilidade == true ? 'rgb(87, 197, 105)' : 'red'} "></i></a></span>
+          <span style="float:left;"><a class="btn btn-outline-secondary btn-sm" id="detalhes" style="color: #999; font-size: 1.0em; float: right;" data-bind="click:adicionarCarrinho"><i class="fa fa-cart-plus"></i></a></span><br />
+          <img data-bind="attr:{src:img}" id="imagens" class="m-2" style = "width: 50px;";/><br />
+          <span data-bind="text: nome" style="text-align: center; display: block;"></span><br />
+          <span>Espetáculo: </span><span data-bind="text: preco" style="float:right;"></span><span style="float: right;"><b>€</b></span><br />
+          <span>Duração: </span><span data-bind="text:tempo" style="float:right;"></span><span style="float: right;"><b>min</b></span><br />
+          <span>Local: </span><span data-bind="text: $parent.sede"></span><br />
+          <span>Especialidade: </span><span data-bind="text:especialidade" style="float:right;"></span><br />
+          <span class="text-center"><a data-bind="attr:{href:'detalhesArtistas.html?agente='+$parent.email+'&artista='+email}" class="btn btn-outline-secondary btn-sm" id="detalhes" style="color: #999; font-size: 1.0em"><i class="fa fa-info-circle"></i></a></span><br />
+        </div> 
+      <!-- /ko -->
+      <!-- /ko -->
+      </div>
+    </div>
+
+    <!-- Rodapé
+================================================== -->
+    <div class="navbar navbar-dark fixed-bottom bg-dark"role="navigation">
+      <div class="container">
+        <div class="navbar-text small">&copy;MAS2020 -Modelação e Análise de Sistemas</div>
+        <div class="navbar-right navbar-text small d-sm-noned-md-block">
+          <a href="http://www.ua.pt"title="Universidade de Aveiro">Universidade de Aveiro</a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- jQuery, then Popper.js, Bootstrap JS, knocoukt -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    
+    <script src="js/jquery-3.5.1.js"></script>
+    <script src="js/knockout.js"></script>
+    <script src="jquery-ui-1.12.1/jquery-ui.js"></script>
+    <script src="js/global.js"></script>-->
+    <script src="viewmodel/artistasBD.js"></script>
+    <script src="viewmodel/artistas.js"></script>
+    
+  </body>
+</html>

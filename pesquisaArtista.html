@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/nice-select.css" />
+
+    <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.css">
+    <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.structure.css">
+    <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.theme.css">
+</head>
+<body>
+
+
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand mx-auto" href="index.html">
+            <img src="images/Big Fest.png" width="60" height="60" class="d-inline-block align-justify" alt="">
+        </a>
+    </nav>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="artistas.html">Artistas <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="equipamentos.html">Equipamentos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="servicos.html">Serviços</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="pesquisaArtista.html">Pesquisa</a>
+                </li>
+            </ul>
+            <div class="header__nav__widget">
+                <div class="header__nav__widget__btn">
+                    <a href="index.html">Log Out</a>
+                    <a href="ContaUtilizador.html"><i class="fa fa-user"></i></a>
+                    <a href="carrinho.html"><i class="fa fa-shopping-cart"></i></a>
+                </div>
+            </div>
+        </div>
+
+
+    </nav>
+
+
+
+    <!-- Header Section End -->
+    <!-- Car Section Begin -->
+    <section class="car spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="car__sidebar">
+                        <div class="car__filter">
+                            <h5>Filtros</h5>
+                            <form action="#">
+                                <select style="display: none;">
+                                    <option data-display="Brand">Preço</option>
+                                    <option value="">Até 100€</option>
+                                    <option value="">100-200€</option>
+                                    <option value="">200-300€</option>
+                                    <option value="">300-500€</option>
+                                    <option value="">Superior a 500€</option>
+                                </select><div class="nice-select" tabindex="0"><span class="current">Preço</span><ul class="list"><li data-value="Select Model" data-display="Model" class="option selected focus">Preço</li><li data-value="" class="option">Até 100€</li><li data-value="" class="option">100-200€</li><li data-value="" class="option">200-300€</li><li data-value="" class="option">300-500€</li><li data-value="" class="option">Superior a 500€</li></ul></div>
+                                <select style="display: none;">
+                                    <option data-display="Model">Especialidade</option>
+                                    <option value="">Fadista</option>
+                                    <option value="">Magia</option>
+                                    <option value="">Comediante</option>
+                                </select><div class="nice-select" tabindex="0"><span class="current">Especialidade</span><ul class="list"><li data-value="Select Model" data-display="Model" class="option selected">Especialidade</li><li data-value="" class="option">Fadista</li><li data-value="" class="option">Magia</li><li data-value="" class="option">Comediante</li></ul></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-9">
+                    <div class="car__filter__option">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6">
+                                <div class="car__filter__option__item">
+                                    <h6>Pesquisar por</h6>
+                                    <div class="dropdown-content">
+                                        <a href="pesquisaArtista.html">Artistas</a>
+                                        <a href="pesquisaEquipamento.html">Equipamentos</a>
+                                        <a href="pesquisaServiço.html">Serviços</a>
+                                        <a href="pesquisaEmpresa.html">Empresa</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6">
+                                <div class="car__search">
+                                    <form action="">
+                                        <input type="text" placeholder="Search...">
+                                        <button onclick="search()" type="submit"><i class="fa fa-search"></i></button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="navbar navbar-dark fixed-bottom bg-dark" role="navigation">
+        <div class="container">
+            <div class="navbar-text small">&copy;MAS2020 -Modelação e Análise de Sistemas</div>
+            <div class="navbar-right navbar-text small d-sm-noned-md-block">
+                <a href="http://www.ua.pt" title="Universidade de Aveiro">Universidade de Aveiro</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/knockout.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('select').niceSelect();
+        })
+    </script>
+    <script src="js/artistasBD.js"></script>
+    <script src="js/Pesquisa.js"></script>
+    
+
+
+
+
+
+
+</body>
+
+
+</html>

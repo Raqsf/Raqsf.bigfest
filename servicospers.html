@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <title>Personalizar serviço</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"></link>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+
+    <!-- jQuery -->
+    <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.css">
+    <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.structure.css">
+    <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.theme.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-dark bg-dark">
+      <a class="navbar-brand mx-auto" href="index1.html">
+        <img src="images/Big Fest.png" width="60" height="60" class="d-inline-block align-justify" alt="">
+      </a>
+    </nav>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="artistas.html">Artistas <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="equipamentos.html">Equipamentos</a>
+          </li>
+          <li class="nav-item  active">
+            <a class="nav-link" href="servicos.html">Serviços</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pesquisaArtista.html">Pesquisa</a>
+          </li>
+        </ul>
+      </div>
+      <div class="header__nav__widget">
+        <div class="header__nav__widget__btn">
+            <a href="index.html">Log Out</a></li>
+            <a href="ContaUtilizador.html"><i class="fa fa-user"></i></a>
+            <a href="carrinho.html"><i class="fa fa-shopping-cart"></i></a>
+        </div>
+      </div>
+    </nav>
+    
+    <div class="container text-left"  style="padding-top: 15px;padding-bottom: 15px;">
+      <div class="row">
+        <label for="datepicker">Inicio de evento:</label>
+        <div class="input-group date col-md-2">
+          <input type="text" class="form-control form-control-sm" id="datepicker">
+          <span class="input-group-addon">
+            <span style="padding-top: 10px!important; padding-left: 10px;" class="fa fa-calendar"></span>
+        </span>
+        </div>
+        <label style="padding-left: 50px;" for="datepicker">Fim de evento:</label>
+        <div class="input-group date col-md-2">
+          <input type="text" class="form-control form-control-sm" id="datepicker1">
+          <span class="input-group-addon">
+            <span style="padding-top: 10px!important; padding-left: 10px;" class="fa fa-calendar"></span>
+          </span>
+        </div>
+        <div>
+          <button type="button" class="btn btn-outline-primary" onclick="location.href='servicos.html'">Pack Predefinido</button>
+        </div>
+        <div class="col-md-3">
+          <button type="button" class="btn btn-primary" onclick="location.href='servicosper.html'">Pack Personalizado</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="container text-left"  style="padding-top: 15px;padding-bottom: 15px;">
+        <div class="row" style="font-size: 2.0em;">
+          <span><button id="detalhes" data-toggle="modal" data-target="#exampleModal"><i class="fa fa-plus-square-o"></i></button></span>
+          <p style="padding-left: 20px;"> Criar um pack</p>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Pack personalizado</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+              <div class="form-group">
+                  <input class="form-control mr-sm-2" id="myInput" type="search" placeholder="Procure uma empresa">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></button>
+              </div>
+
+              <section class="d-none" id="formComEmpresa">
+                <div class="form-group">
+                  <ul id="empresasList"><label class="form-check-label" for="inlineCheckbox1">Empresa</label></ul>
+                </div>
+                <div class="form-group">
+                  <p style="font-size: large;">Dados sobre o evento</p>
+                  <form class="form-inline my-2 my-lg-0">
+                    <label class="col-md-5 col-form-label" style="text-align: left; display: block;" for="tipo">Tipo de evento:</label>
+                    <div class="col-7" style="padding-left: 15px;">
+                      <input type="text" class="form-control form-control-sm" id="tipo">
+                    </div>
+                  </form>
+                  <form class="form-inline my-2 my-lg-0">
+                    <label class="col-md-5 col-form-label" style="text-align: left; display: block;" for="dimensao">Dimensões do espaço:</label>
+                    <div class="col-7" style="padding-left: 15px;">
+                      <input type="text" class="form-control form-control-sm" id="dimensao">
+                    </div>
+                  </form>
+                  <form class="form-inline my-2 my-lg-0">
+                    <label class="col-md-5 col-form-label" style="text-align: left; display: block;" for="pessoas">N.º pessoas esperadas:</label>
+                    <div class="col-7" style="padding-left: 15px;">
+                      <input type="text" class="form-control form-control-sm" id="pessoas">
+                    </div>
+                  </form>
+                  <form class="form-inline my-2 my-lg-0">
+                    <label class="col-md-5 col-form-label" style="text-align: left; display: block;" for="local">Local:</label>
+                    <div class="col-7" style="padding-left: 15px;">
+                      <input type="text" class="form-control form-control-sm" id="local">
+                    </div>
+                  </form>
+                  <form class="was-validated my-2 my-lg-0" id="espaco">
+                    <label class="col-md-5 col-form-label" style="text-align: left;" for="espaco">Espaço:</label>
+                    <div class="custom-control custom-radio custom-control-inline">
+                      <input type="radio" class="custom-control-input" id="customControlValidation2" name="radio-stacked" required>
+                      <label class="custom-control-label" for="customControlValidation2">Exterior</label>
+                    </div>
+                    <div class="custom-control custom-radio custom-control-inline">
+                      <input type="radio" class="custom-control-input" id="customControlValidation3" name="radio-stacked" required>
+                      <label class="custom-control-label" for="customControlValidation3">Interior</label>
+                    </div>
+                  </form>
+                </div>
+                <form class="was-validated">
+                  <div class="form-group">
+                    <p style="font-size: large;">Adicione uma imagem ou uma planta do espaço onde se vai realizar o evento</p>
+                    <div class="custom-file">
+                      <input type="file" class="custom-file-input" id="validatedCustomFile" required>
+                      <label class="custom-file-label" style="text-align: left;" for="validatedCustomFile">Choose file...</label>
+                      <div class="invalid-feedback">Example invalid custom file feedback</div>
+                    </div>
+                  </div>
+                </form>
+                <div class="form-group">
+                  <label for="message-text" class="col-form-label">Se quiser adicionar mais alguma informação que achar pertinente sobre o evento, deixe-a aqui
+                  </label>
+                  <textarea class="form-control" id="message-text"></textarea>
+                </div>
+              </form>
+            </div>
+          </section>
+          
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal1">Seguinte</button>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    
+      <!-- Rodapé
+================================================== -->
+    <div class="navbar navbar-dark fixed-bottom bg-dark"role="navigation">
+      <div class="container">
+        <div class="navbar-text small">&copy;MAS2020 -Modelação e Análise de Sistemas</div>
+        <div class="navbar-right navbar-text small d-sm-noned-md-block">
+          <a href="http://www.ua.pt"title="Universidade de Aveiro">Universidade de Aveiro</a>
+        </div>
+      </div>
+    </div>
+    
+  <!-- jQuery, then Popper.js, Bootstrap JS, knocoukt -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  
+  <script src="js/jquery-3.5.1.js"></script>
+  <script src="js/knockout.js"></script>
+  <script src="jquery-ui-1.12.1/jquery-ui.js"></script>
+  <script src="js/global.js"></script>  
+  <script src="viewmodel/equipamentosBD.js"></script>
+  <script src="viewmodel/equipamentos.js"></script>
+  </body>
+</html>

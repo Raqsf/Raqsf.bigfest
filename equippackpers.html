@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <title>Pack equipamento personalizado</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"></link>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+
+    <!-- jQuery -->
+    <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.css">
+    <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.structure.css">
+    <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.theme.css">
+  </head>
+  <body>
+
+    <nav class="navbar navbar-dark bg-dark">
+      <a class="navbar-brand mx-auto" href="index1.html">
+        <img src="images/Big Fest.png" width="60" height="60" class="d-inline-block align-justify" alt="">
+      </a>
+    </nav>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="artistas.html">Artistas <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="artistas.html">Equipamentos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="servicos.html">Serviços</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pesquisaArtista.html">Pesquisa</a>
+          </li>
+        </ul>
+      </div>
+      <div class="header__nav__widget">
+        <div class="header__nav__widget__btn">
+            <a href="index.html">Log Out</a></li>
+            <a href="ContaUtilizador.html"><i class="fa fa-user"></i></a>
+            <a href="carrinho.html"><i class="fa fa-shopping-cart"></i></a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container text-left"  style="padding-top: 20px;">
+      <div class="row">
+        <label for="datepicker">Inicio de evento:</label>
+        <div class="input-group date col-md-2">
+          <input type="text" class="form-control form-control-sm" id="datepicker">
+          <span class="input-group-addon">
+            <span style="padding-top: 10px!important; padding-left: 10px;" class="fa fa-calendar"></span>
+        </span>
+        </div>
+        <label style="padding-left: 50px;" for="datepicker">Fim de evento:</label>
+        <div class="input-group date col-md-2">
+          <input type="text" class="form-control form-control-sm" id="datepicker1">
+          <span class="input-group-addon">
+            <span style="padding-top: 10px!important; padding-left: 10px;" class="fa fa-calendar"></span>
+          </span>
+        </div>
+        <div>
+          <button type="button" class="btn btn-outline-primary" onclick="location.href='equipamentos.html'">Individual</button>
+        </div>
+        <div class="col-md-2">
+          <button type="button" class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Packs
+          </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="equippackp.html">Predefinido</a>
+          <a class="dropdown-item" href="equippackpers.html">Personalizado</a>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <div class="container text-left"  style="padding-top: 15px;padding-bottom: 15px;">
+      <div class="row" style="font-size: 2.0em;">
+        <span><button id="detalhes" data-toggle="modal" data-target="#exampleModal"><i class="fa fa-plus-square-o"></i></button></span>
+        <p style="padding-left: 20px;"> Criar um pack</p>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Pack personalizado</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+
+            <input class="form-control mr-sm-2" id="myInput" type="search" placeholder="Procure uma empresa">
+            <button id="escolhaEmpresa" class="btn btn-outline-success my-2 my-sm-0" type="button"><i
+                class="fa fa-search"></i></button>
+          </div>
+
+          <section class="d-none" id="formComEmpresa">
+            <div class="form-group">
+              <ul id="empresasList"><label class="form-check-label" for="inlineCheckbox1">Empresa</label></ul>
+            </div>
+            <div class="form-group">
+              <input class="form-control mr-sm-2" id="myInput" type="search" placeholder="Procure equipamento">
+              <button class="btn btn-outline-success my-2 my-sm-0" type="button"><i class="fa fa-search"></i></button>
+            </div>
+            <div class="form-group">
+              <ul id="equipamentoEmpresaList"><label class="form-check-label" for="inlineCheckbox1">Equipamento</label>
+              </ul>
+            </div>
+            <div class="form-group">
+              <p>ENTREGA</p>
+              <form class="form-inline my-2 my-lg-0">
+                <label class="col-md-4 col-form-label" for="datepicker">Data de entrega:</label>
+                <div class="input-group date" style="padding-left: 15px;">
+                  <input type="text" class="form-control form-control-sm my-2 my-sm-0" id="datepicker">
+                  <span class="input-group-addon">
+                    <span style="padding-top: 10px!important; padding-left: 10px;" class="fa fa-calendar"></span>
+                  </span>
+              </form>
+            </div>
+            <div class="form-group">
+              <form class="form-inline my-2 my-lg-0">
+                <label for="inputEmail3" class="col-md-4 col-form-label">Local de entrega:</label>
+                <div class="col-md-8">
+                  <input type="email" class="form-control" id="inputEmail3" placeholder="Local">
+                </div>
+              </form>
+            </div>
+            <div class="form-group">
+              <p>DEVOLUÇÃO</p>
+              <form class="form-inline my-2 my-lg-0">
+                <label class="col-md-4 col-form-label" for="datepicker">Data de devolução:</label>
+                <div class="input-group date" style="padding-left: 15px;">
+                  <input type="text" class="form-control form-control-sm my-2 my-sm-0" id="datepicker">
+                  <span class="input-group-addon">
+                    <span style="padding-top: 10px!important; padding-left: 10px;" class="fa fa-calendar"></span>
+                  </span>
+              </form>
+            </div>
+            <div class="form-group">
+              <form class="form-inline my-2 my-lg-0">
+                <label for="inputEmail3" class="col-md-4 col-form-label">Local de devolução</label>
+                <div class="col-sm-7">
+                  <input type="email" class="form-control" id="inputEmail3" placeholder="Local">
+                </div>
+              </form>
+            </div>
+          </section>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-toggle="modal"
+            data-target="#exampleModal1">Seguinte</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Confirmação</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <ul id="equipamentoEmpresaList"><label class="form-check-label" for="inlineCheckbox1">Equipamento</label></ul>
+            </div>
+            <div class="form-group">
+              <span style="float:right">Total:</span>
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-target="#">Criar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+        <!-- Rodapé
+================================================== -->
+    <div class="navbar navbar-dark fixed-bottom bg-dark"role="navigation">
+      <div class="container">
+        <div class="navbar-text small">&copy;MAS2020 -Modelação e Análise de Sistemas</div>
+        <div class="navbar-right navbar-text small d-sm-noned-md-block">
+          <a href="http://www.ua.pt"title="Universidade de Aveiro">Universidade de Aveiro</a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- jQuery, then Popper.js, Bootstrap JS, knocoukt -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    
+    <script src="js/jquery-3.5.1.js"></script>
+    <script src="js/knockout.js"></script>
+    <script src="jquery-ui-1.12.1/jquery-ui.js"></script>
+    <script src="js/global.js"></script>
+    <script src="viewmodel/equipamentosBD.js"></script>
+    <script src="viewmodel/equipamentos.js"></script>
+  </body>
+</html>
