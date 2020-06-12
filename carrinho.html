@@ -17,6 +17,25 @@
     <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.structure.css">
     <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.theme.css">
 
+    <!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/nice-select.css" />
+
+    <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.css">
+    <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.structure.css">
+    <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.theme.css">
+
     <style>
         body {
             font-family: Arial, Helvetica, sans-serif;
@@ -65,7 +84,7 @@
 
 <body>
     <nav class="navbar navbar-dark bg-dark">
-        <a class="navbar-brand mx-auto" href="index.html">
+        <a class="navbar-brand mx-auto" href="index1.html">
             <img src="images/Big Fest.png" width="60" height="60" class="d-inline-block align-justify" alt="">
         </a>
     </nav>
@@ -82,7 +101,7 @@
                     <a class="nav-link" href="servicos.html">Serviços</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Pesquisa</a>
+                    <a class="nav-link" href="pesquisaArtista.html">Pesquisa</a>
                 </li>
             </ul>
         </div>
@@ -96,6 +115,19 @@
 
 
     </nav>
+
+    <div class="container"  style="padding-top: 20px; padding-bottom: 50px">
+        <div class="row">
+        <!-- ko foreach: carrinho -->
+          <div id="item" class="col-md-2">
+            <span style="float:right;"><a class="btn btn-outline-secondary btn-sm" id="detalhes" style="color: #999; font-size: 1.0em;"></a><i class='fa fa-circle' data-bind="style:{color: disponibilidade == true ? 'rgb(87, 197, 105)' : 'red'} "></i></a></span>
+            <img data-bind="attr:{src:img}" id="imagens" class="m-2" style = "width: 50px;";/><br />
+            <span data-bind="text: nome" style="text-align: center; display: block;"></span><br />
+            <span>Preço: </span><span data-bind="text: preco" style="float:right;"></span><span style="float: right;"><b>€</b></span><br />
+          </div> 
+        <!-- /ko -->
+        </div>
+      </div>
 
     <section class="car spad">
         <div class="container">
